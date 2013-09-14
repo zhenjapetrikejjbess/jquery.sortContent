@@ -45,7 +45,7 @@
 						target:function($child,index){
 							return $child;
 						},format:function(html){
-							return html.toLowerCase();
+							return html.toLowerCase().replace(/(<([^>]+)>)/ig, "");
 						}
 				}
 				/**
@@ -55,7 +55,7 @@
 			},sortHtmlArray:function(arry,$th,args){
 				
 				return arry.sort(function(a, b){
-			    	 var nameA=args.format(a.html.replace(/(<([^>]+)>)/ig, "")), nameB=args.format(b.html.replace(/(<([^>]+)>)/ig, ""))
+			    	 var nameA=args.format(a.html), nameB=args.format(b.html)
 			    	 
 			    	 if (nameA < nameB) //sort string ascending
 			    	  return -1 
