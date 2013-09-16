@@ -178,7 +178,7 @@
 				methdSorContent.realSelected(jqparent).each(function(i,e){
 					args['target']($(e),i).html(arryHTML[i].thtml);
 					arryHTML[i].newjq=args['target']($(e),i).get(0);
-					args['helperxp']['set']($(mx[p][k]),subarr[parseInt(k)].html)
+					args['helperxp']['set']($(e),arryHTML[i].html)
 			     });
 				return arryHTML;
 			},setHTMLx:function(arryHTML,$this,args){
