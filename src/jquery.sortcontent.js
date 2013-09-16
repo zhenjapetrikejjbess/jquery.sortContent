@@ -189,7 +189,7 @@
 				for(var p=0;p<Object.keys(mx).length;p++){
 					subarr=arryHTML.filter(function (el) {return el.ctx===mx[p]});
 					subarr=methdSorContent.sortHtmlArray(subarr, $this, args, 'xtertib','xw','xsc');
-					for(var k=0;k<Object.keys(mx[p]).length;k++){
+					for(var k=0;k<methdSorContent.adedKeysInt(mx[p])+1;k++){
 						args['target']($(mx[p][k]),subarr[parseInt(k)].tertib).html(subarr[parseInt(k)].thtml);
 						args['helperxp']['set']($(mx[p][k]),subarr[parseInt(k)].html)
 						arryHTML[j].newjq=args['target']($(mx[p][k]),subarr[parseInt(k)].tertib).get(0);	
@@ -210,6 +210,12 @@
 				}else{
 					return jq;
 				}
+			},adedKeysInt:function(obj){
+				 var kn=0;
+                                                             while(obj[kn+'']){ 
+                                                                             kn++;
+                                                                }
+                                                                return kn-1;
 			}
 	};
 	$.fn.sortContent=function(args){
