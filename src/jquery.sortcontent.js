@@ -183,7 +183,7 @@
 				return arryHTML;
 			},setHTMLx:function(arryHTML,$this,args){
 				/*PER_PARENT*/
-				var mx=$this.___1434___();
+				var mx=$this.abdennourgp();
 				var subarr=[];
 				var j=0;
 				for(var p=0;p<Object.keys(mx).length;p++){
@@ -227,7 +227,7 @@
 	/**
 	 * @return matrix m[0]=>1st parent ;m[0][1] 2nd child in 1st prarent
 	 */
-	$.fn.___1434___=function(){
+	$.fn.abdennourgp=function(){
 		var tmp={};
 		var all=$(this);
 		var inc=0;
